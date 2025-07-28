@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-100%);
+    opacity: 0%;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 100%;
+  }
+}
+
+.animate-slide-down {
+  animation: slide-down 0.5s ease-out;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210deg 40% 98%;
+    --foreground: 222deg 84% 5%;
+    --card: 0deg 0% 100%;
+    --card-foreground: 222deg 84% 5%;
+    --popover: 0deg 0% 100%;
+    --popover-foreground: 222deg 84% 5%;
+    --primary: 217deg 91% 60%;
+    --primary-foreground: 0deg 0% 100%;
+    --secondary: 210deg 40% 98%;
+    --secondary-foreground: 222deg 84% 5%;
+    --muted: 210deg 40% 98%;
+    --muted-foreground: 215deg 16% 47%;
+    --accent: 199deg 89% 48%;
+    --accent-foreground: 0deg 0% 100%;
+    --destructive: 0deg 84% 60%;
+    --destructive-foreground: 0deg 0% 100%;
+    --border: 214deg 32% 91%;
+    --input: 214deg 32% 91%;
+    --ring: 217deg 91% 60%;
+    --chart-1: 217deg 91% 60%;
+    --chart-2: 199deg 89% 48%;
+    --chart-3: 142deg 76% 36%;
+    --chart-4: 45deg 93% 47%;
+    --chart-5: 0deg 84% 60%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 215deg 28% 17%;
+    --foreground: 210deg 40% 98%;
+    --card: 215deg 28% 17%;
+    --card-foreground: 210deg 40% 98%;
+    --popover: 215deg 28% 17%;
+    --popover-foreground: 210deg 40% 98%;
+    --primary: 217deg 91% 60%;
+    --primary-foreground: 0deg 0% 100%;
+    --secondary: 215deg 25% 27%;
+    --secondary-foreground: 210deg 40% 98%;
+    --muted: 215deg 25% 27%;
+    --muted-foreground: 215deg 16% 47%;
+    --accent: 199deg 89% 48%;
+    --accent-foreground: 0deg 0% 100%;
+    --destructive: 0deg 84% 60%;
+    --destructive-foreground: 0deg 0% 100%;
+    --border: 215deg 25% 27%;
+    --input: 215deg 25% 27%;
+    --ring: 217deg 91% 60%;
+    --chart-1: 217deg 91% 60%;
+    --chart-2: 199deg 89% 48%;
+    --chart-3: 142deg 76% 36%;
+    --chart-4: 45deg 93% 47%;
+    --chart-5: 0deg 84% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+
+    font-family: Inter, sans-serif;
+  }
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+}
+
+.glass-effect {
+  backdrop-filter: blur(10px);
+  background: rgb(255 255 255 / 10%);
+  border: 1px solid rgb(255 255 255 / 20%);
+}
